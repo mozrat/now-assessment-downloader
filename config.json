@@ -1,0 +1,7 @@
+{
+  "username": "Put your actual ServiceNow username in local_config.json - never here",
+  "password": "Put your actual ServiceNow password in local_config.json - never here",
+  "query": "",
+  "instance": "Put your full ServiceNow URL in local_config.json - never here",
+  "output_dir": "Put your output directory in local_config.json. Defaults to output"
+}
