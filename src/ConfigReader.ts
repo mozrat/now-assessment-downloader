@@ -5,7 +5,7 @@ export interface IConfig {
   password: string;
   instance: string;
   query: string;
-  output_dir: string;
+  output_file: string;
 }
 
 export class ConfigReader {
