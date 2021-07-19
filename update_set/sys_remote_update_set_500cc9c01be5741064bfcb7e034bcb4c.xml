@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2021-07-19 18:38:10">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="GRC: Vendor Risk Management">4c821a2d9f42220030581471367fcf2c</application>
+<application_name>GRC: Vendor Risk Management</application_name>
+<application_scope>sn_vdr_risk_asmt</application_scope>
+<application_version>12.0.4</application_version>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>AssessmentDownloader</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>33ea85401be5741064bfcb7e034bcbd0</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>simon.morris</sys_created_by>
+<sys_created_on>2021-07-19 18:38:10</sys_created_on>
+<sys_id>500cc9c01be5741064bfcb7e034bcb4c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>simon.morris</sys_updated_by>
+<sys_updated_on>2021-07-19 18:38:10</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GRC: Vendor Risk Management">4c821a2d9f42220030581471367fcf2c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_definition_ac9d7939dbccf45085b7fe1b6896198e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/sn_vdr_risk_asmt/vrmexcelexport</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>VRMExcelExport</name><namespace>sn_vdr_risk_asmt</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>vrmexcelexport</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>simon.morris@snc</sys_created_by><sys_created_on>2021-05-11 19:10:09</sys_created_on><sys_id>ac9d7939dbccf45085b7fe1b6896198e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>VRMExcelExport</sys_name><sys_package display_value="GRC: Vendor Risk Management" source="sn_vdr_risk_asmt">4c821a2d9f42220030581471367fcf2c</sys_package><sys_policy/><sys_scope display_value="GRC: Vendor Risk Management">4c821a2d9f42220030581471367fcf2c</sys_scope><sys_update_name>sys_ws_definition_ac9d7939dbccf45085b7fe1b6896198e</sys_update_name><sys_updated_by>simon.morris@snc</sys_updated_by><sys_updated_on>2021-05-11 19:10:09</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+<payload_hash>-1306352901</payload_hash>
+<remote_update_set display_value="AssessmentDownloader">500cc9c01be5741064bfcb7e034bcb4c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>simon.morris</sys_created_by>
+<sys_created_on>2021-07-19 18:38:10</sys_created_on>
+<sys_id>940cc9c01be5741064bfcb7e034bcb4c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1795cd6299e0000001</sys_recorded_at>
+<sys_updated_by>simon.morris</sys_updated_by>
+<sys_updated_on>2021-07-19 18:38:10</sys_updated_on>
+<table/>
+<target_name>VRMExcelExport</target_name>
+<type>Scripted REST API</type>
+<update_domain>global</update_domain>
+<update_guid>d4ad797982ccf4502a58afd9f6e82e21</update_guid>
+<update_guid_history>d4ad797982ccf4502a58afd9f6e82e21:-1306352901</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GRC: Vendor Risk Management">4c821a2d9f42220030581471367fcf2c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_46ad3979dbccf45085b7fe1b6896197b</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;GetExcel&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var api = new sn_vdr_risk_asmt.VRMExportExcelAPI();
+	var data = api.getResponseJSON(request.pathParams.id);
+		
+		// 401d08bc1b805010c3182f452a4bcb6e
+	
+	response.setBody(data);
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_vdr_risk_asmt/vrmexcelexport/{id}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/{id}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;simon.morris@snc&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-05-11 19:10:34&lt;/sys_created_on&gt;&lt;sys_id&gt;46ad3979dbccf45085b7fe1b6896197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;GetExcel&lt;/sys_name&gt;&lt;sys_package display_value="GRC: Vendor Risk Management" source="sn_vdr_risk_asmt"&gt;4c821a2d9f42220030581471367fcf2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GRC: Vendor Risk Management"&gt;4c821a2d9f42220030581471367fcf2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_46ad3979dbccf45085b7fe1b6896197b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;simon.morris&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-07-19 18:35:56&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="VRMExcelExport"&gt;ac9d7939dbccf45085b7fe1b6896198e&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-1753793833</payload_hash>
+<remote_update_set display_value="AssessmentDownloader">500cc9c01be5741064bfcb7e034bcb4c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>simon.morris</sys_created_by>
+<sys_created_on>2021-07-19 18:38:10</sys_created_on>
+<sys_id>9c0cc9c01be5741064bfcb7e034bcb4c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17ac00da2c40000001</sys_recorded_at>
+<sys_updated_by>simon.morris</sys_updated_by>
+<sys_updated_on>2021-07-19 18:38:10</sys_updated_on>
+<table/>
+<target_name>GetExcel</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>3f7b058039e57410fd72bfca96318419</update_guid>
+<update_guid_history>3f7b058039e57410fd72bfca96318419:-1753793833,84c44e751c0038504ffea310494f0967:132379170,84a482b5520038507d808e29420b9a45:-517929438,76f0ca3decccf45039b99beee6a2d5c4:346065360,b5fff93dd0ccf450c422673ad6489fbf:-1499158352,5c9fb93d3cccf450f2f8e0e764d6a517:1075723732,cd7ff9b995ccf45020597b999f759af2:-60127980,8e0eb57982ccf450581da16eea46a920:-1970261289,0cfdbd79d2ccf450c6a02b421bd73b0a:62858446,d6bd797945ccf450e5de88cb807d712d:79604747</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>

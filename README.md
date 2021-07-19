@@ -12,3 +12,8 @@ Instead copy config.json to local_config.json and edit that file instead
 * query: The encoded query of the asmt_assessment_instance table. This will download the associated Excel answers
 * instance: The full URL of the ServiceNow instance (no trailing slash)
 * output_dir: Where the files should be written to
+
+## How to install dependencies
+
+npm install
+npm run
